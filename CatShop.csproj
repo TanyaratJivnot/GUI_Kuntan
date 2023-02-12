@@ -1,0 +1,603 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B503D3FF-B9B7-453F-937B-6D150DE5DA7C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CatShop</RootNamespace>
+    <AssemblyName>CatShop</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Data.Sqlite, Version=5.0.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Data.Sqlite.Core.5.0.5\lib\netstandard2.0\Microsoft.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2, Version=2.0.4.976, Culture=neutral, PublicKeyToken=8226ea5df37bcae9, processorArchitecture=MSIL">
+      <HintPath>packages\SQLitePCLRaw.bundle_e_sqlite3.2.0.4\lib\net461\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core, Version=2.0.4.976, Culture=neutral, PublicKeyToken=1488e028ca7ab535, processorArchitecture=MSIL">
+      <HintPath>packages\SQLitePCLRaw.core.2.0.4\lib\netstandard2.0\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.nativelibrary, Version=2.0.4.976, Culture=neutral, PublicKeyToken=502ed628492ab262, processorArchitecture=MSIL">
+      <HintPath>packages\SQLitePCLRaw.bundle_e_sqlite3.2.0.4\lib\net461\SQLitePCLRaw.nativelibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.dynamic_cdecl, Version=2.0.4.976, Culture=neutral, PublicKeyToken=b68184102cba0b3b, processorArchitecture=MSIL">
+      <HintPath>packages\SQLitePCLRaw.provider.dynamic_cdecl.2.0.4\lib\netstandard2.0\SQLitePCLRaw.provider.dynamic_cdecl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AmericanShorthair.xaml.cs">
+      <DependentUpon>AmericanShorthair.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Buy_a_Cat.xaml.cs">
+      <DependentUpon>Buy_a_Cat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CatStore.xaml.cs">
+      <DependentUpon>CatStore.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CusCoppy.cs" />
+    <Compile Include="DetailCat.cs" />
+    <Compile Include="DetailCustomer.cs" />
+    <Compile Include="EUcat.xaml.cs">
+      <DependentUpon>EUcat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryFoCat.xaml.cs">
+      <DependentUpon>HistoryFoCat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Korads.xaml.cs">
+      <DependentUpon>Korads.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MaineCoon.xaml.cs">
+      <DependentUpon>MaineCoon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindowLogin.cs" />
+    <Compile Include="ManyMore.xaml.cs">
+      <DependentUpon>ManyMore.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mybill.xaml.cs">
+      <DependentUpon>Mybill.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyProfile.xaml.cs">
+      <DependentUpon>MyProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Persian.xaml.cs">
+      <DependentUpon>Persian.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScottishFold.xaml.cs">
+      <DependentUpon>ScottishFold.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingDB_CustomerToCheck.cs" />
+    <Compile Include="SingUpCustomerDB.cs" />
+    <Compile Include="Sing_Up.xaml.cs">
+      <DependentUpon>Sing_Up.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sphinx.xaml.cs">
+      <DependentUpon>Sphinx.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tablecat.cs" />
+    <Compile Include="ThaiCat.xaml.cs">
+      <DependentUpon>ThaiCat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Visiamases.xaml.cs">
+      <DependentUpon>Visiamases.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AmericanShorthair.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Buy_a_Cat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CatStore.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EUcat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HistoryFoCat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Korads.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MaineCoon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ManyMore.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Mybill.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Persian.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ScottishFold.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sing_Up.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sphinx.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ThaiCat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Visiamases.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Log In %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Picture1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Log In %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Log In %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="333.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="market.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="222.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Log In %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BT2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BT3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BT22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BT2.2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BTC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Log In %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Log In.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Foot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="EN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="th.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="base.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="base1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Log In %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Log In %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="hicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="buttonspe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Log In %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="buy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="buy22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Log In %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Log In %2811%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Log In %2812%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="K3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="K4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="K5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="K6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="K9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="K10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Manymore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Manymore2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Manymore4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Manymore7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Manymore11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="S6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="S8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="S9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="A6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="A3.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="A4.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="A_edited.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="A5_edited.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="A2_edited.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sph1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sph0_edited.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sph3_edited.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sph_edited.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sph5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="M1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="M4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="M6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="M9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="M2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="p1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="p5.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="p4_edited.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="p_edited.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="p2_edited.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Manymore13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="S1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="v.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="V1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="V2v.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="V3vv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="V5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="V5xx.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="V1vVV.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="P5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CatAll\AM1.jpg" />
+    <Resource Include="CatAll\AM2.jpg" />
+    <Resource Include="CatAll\AM3.jpeg" />
+    <Resource Include="CatAll\AM4.jpg" />
+    <Resource Include="CatAll\AM5.jpg" />
+    <Resource Include="CatAll\K1.jpg" />
+    <Resource Include="CatAll\K2.jpg" />
+    <Resource Include="CatAll\K3.jpg" />
+    <Resource Include="CatAll\K4.jpg" />
+    <Resource Include="CatAll\K5.jpg" />
+    <Resource Include="CatAll\MC1.jpg" />
+    <Resource Include="CatAll\MC2.jpg" />
+    <Resource Include="CatAll\MC3.jpg" />
+    <Resource Include="CatAll\MC4.jpg" />
+    <Resource Include="CatAll\MC5.jpg" />
+    <Resource Include="CatAll\MM1.png" />
+    <Resource Include="CatAll\MM2.png" />
+    <Resource Include="CatAll\MM3.png" />
+    <Resource Include="CatAll\MM4.png" />
+    <Resource Include="CatAll\MM5.png" />
+    <Resource Include="CatAll\P1.jpg" />
+    <Resource Include="CatAll\P2.jpg" />
+    <Resource Include="CatAll\P3.jpg" />
+    <Resource Include="CatAll\P4.jpg" />
+    <Resource Include="CatAll\S1.jpg" />
+    <Resource Include="CatAll\S2.jpg" />
+    <Resource Include="CatAll\S3.jpg" />
+    <Resource Include="CatAll\S4.jpg" />
+    <Resource Include="CatAll\S5.jpg" />
+    <Resource Include="CatAll\SH1.jpg" />
+    <Resource Include="CatAll\SH2.jpg" />
+    <Resource Include="CatAll\SH3.jpg" />
+    <Resource Include="CatAll\SH4.jpg" />
+    <Resource Include="CatAll\SH5.jpg" />
+    <Resource Include="CatAll\V0.jpg" />
+    <Resource Include="CatAll\V1.jpg" />
+    <Resource Include="CatAll\V2.jpg" />
+    <Resource Include="CatAll\V3.jpg" />
+    <Resource Include="CatAll\V4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CatAll\P5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="176972531_1570809793309698_3543642768095521070_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="177499458_126212012786030_4317410191080596451_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="177768117_473502813889556_1975537896653681438_n.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\SQLitePCLRaw.lib.e_sqlite3.2.0.4\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets" Condition="Exists('packages\SQLitePCLRaw.lib.e_sqlite3.2.0.4\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\SQLitePCLRaw.lib.e_sqlite3.2.0.4\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\SQLitePCLRaw.lib.e_sqlite3.2.0.4\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets'))" />
+  </Target>
+</Project>
