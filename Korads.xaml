@@ -1,0 +1,52 @@
+﻿<Window x:Class="CatShop.Korads"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CatShop"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" 
+        BorderThickness="0"
+        AllowsTransparency="True"
+        Title="Korads" Height="450" Width="800">
+    <Grid>
+        <Image Margin="0,0,0,-0.4" Source="9.png" Stretch="Fill"/>
+        <Button x:Name="CloseKorad" Content="CloseKorad" HorizontalAlignment="Left" Height="15" Margin="767,15,0,0" VerticalAlignment="Top" Width="16" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="CloseKorad_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Picture1.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BackKorad" Content="BackKorad" HorizontalAlignment="Left" Height="23" Margin="12,13,0,0" VerticalAlignment="Top" Width="26" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="BackKorad_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="hicon.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="K2" Content="" HorizontalAlignment="Left" Height="114" Margin="68,226,0,0" VerticalAlignment="Top" Width="114" Click="K2_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="K3.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="K1" Content="" HorizontalAlignment="Left" Height="114" Margin="619,226,0,0" VerticalAlignment="Top" Width="114" Click="K1_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="K10.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="K5" Content="" HorizontalAlignment="Left" Height="114" Margin="479,226,0,0" VerticalAlignment="Top" Width="114" Click="K5_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="K6.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="K4" Content="" HorizontalAlignment="Left" Height="114" Margin="342,226,0,0" VerticalAlignment="Top" Width="114" Click="K4_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="K5.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="K3" Content="" HorizontalAlignment="Left" Height="114" Margin="205,226,0,0" VerticalAlignment="Top" Width="114" Click="K3_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="K4.jpg"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

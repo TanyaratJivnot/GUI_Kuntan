@@ -1,0 +1,54 @@
+﻿<Window x:Class="CatShop.Visiamases"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CatShop"
+        mc:Ignorable="d"
+         WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" 
+        BorderThickness="0"
+        AllowsTransparency="True"
+        Title="Visiamases" Height="450" Width="800">
+    <Grid>
+
+        <Image Margin="0,0,0,-0.4" Source="Log In (12).png" Stretch="Fill"/>
+
+        <Button x:Name="CloseVisia" Content="CloseVisia" HorizontalAlignment="Left" Height="15" Margin="767,15,0,0" VerticalAlignment="Top" Width="16" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="CloseVisia_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Picture1.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BackVisia" Content="BackVisia" HorizontalAlignment="Left" Height="23" Margin="12,13,0,0" VerticalAlignment="Top" Width="26"  BorderBrush="{x:Null}" Foreground="{x:Null}" Click="BackVisia_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="hicon.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="V1" Content="" HorizontalAlignment="Left" Height="116" Margin="67,223,0,0" VerticalAlignment="Top" Width="113" Click="V1_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="v.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="V5" Content="" HorizontalAlignment="Left" Height="116" Margin="620,223,0,0" VerticalAlignment="Top" Width="114" Click="V5_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="V5xx.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="V4" Content="" HorizontalAlignment="Left" Height="116" Margin="481,223,0,0" VerticalAlignment="Top" Width="113" Click="V4_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="V3vv.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="V3" Content="" HorizontalAlignment="Left" Height="116" Margin="341,223,0,0" VerticalAlignment="Top" Width="113" Click="V3_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="V2v.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="V2" Content="" HorizontalAlignment="Left" Height="116" Margin="205,223,0,0" VerticalAlignment="Top" Width="113" Click="V2_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="V1vVV.jpg"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

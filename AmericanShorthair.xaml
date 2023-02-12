@@ -1,0 +1,52 @@
+﻿<Window x:Class="CatShop.AmericanShorthair"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CatShop"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" 
+        BorderThickness="0"
+        AllowsTransparency="True"
+        Title="AmericanShorthair" Height="450" Width="800">
+    <Grid>
+        <Image Margin="0,0,0,-0.4" Source="12.png" Stretch="Fill"/>
+        <Button x:Name="CloseAmerican1" Content="CloseAmerican" HorizontalAlignment="Left" Height="15" Margin="767,15,0,0" VerticalAlignment="Top" Width="16" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="CloseAmerican1_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Picture1.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="HomeAmerican" Content="HomeAmerican" HorizontalAlignment="Left" Height="23" Margin="12,13,0,0" VerticalAlignment="Top" Width="26" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="HomeAmerican_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="hicon.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="A1" Content="" HorizontalAlignment="Left" Height="114" Margin="66,221,0,0" VerticalAlignment="Top" Width="115" Click="A1_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="A_edited.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="A5" Content="" HorizontalAlignment="Left" Height="114" Margin="621,221,0,0" VerticalAlignment="Top" Width="115" Click="A5_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="A6.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="A4" Content="" HorizontalAlignment="Left" Height="114" Margin="480,221,0,0" VerticalAlignment="Top" Width="115" Click="A4_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="A5_edited.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="A3" Content="" HorizontalAlignment="Left" Height="114" Margin="341,221,0,0" VerticalAlignment="Top" Width="115" Click="A3_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="A3.jpeg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="A2" Content="" HorizontalAlignment="Left" Height="114" Margin="203,221,0,0" VerticalAlignment="Top" Width="115" Click="A2_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="A2_edited.jpg"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

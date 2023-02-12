@@ -1,0 +1,68 @@
+﻿<Window x:Class="CatShop.EUcat"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CatShop"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" 
+        BorderThickness="0"
+        AllowsTransparency="True"
+        Title="EUcat" Height="450" Width="800">
+    <Grid>
+        <Image Margin="0,0,0,-0.4" Source="7.png" Stretch="Fill"/>
+
+        <Button x:Name="Account3" Content="" HorizontalAlignment="Left" Margin="44,137,0,0" VerticalAlignment="Top" Width="89" RenderTransformOrigin="-1.763,3.74" Height="89" Foreground="{x:Null}" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="BT3.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="CatStore3" Content="Button" HorizontalAlignment="Left" Margin="44,259,0,0" VerticalAlignment="Top" Width="89" RenderTransformOrigin="-1.763,3.74" Height="89" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="BTC.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="American_Shorthair" Content="American Shorthair" HorizontalAlignment="Left" Height="36" Margin="400,257,0,0" VerticalAlignment="Top" Width="178" FontSize="14" FontFamily="UD Digi Kyokasho NP-B" BorderBrush="{x:Null}" Click="American_Shorthair_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="buttonspe.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Persian" Content="Persian" HorizontalAlignment="Left" Height="36" Margin="625,257,0,0" VerticalAlignment="Top" Width="121" BorderBrush="{x:Null}" FontFamily="UD Digi Kyokasho NP-B" FontSize="14" Click="Persian_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="buttonspe.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Maine_Coon" Content="Maine Coon" HorizontalAlignment="Left" Height="37" Margin="324,382,0,0" VerticalAlignment="Top" Width="121" FontSize="14" FontFamily="UD Digi Kyokasho NP-B" BorderBrush="{x:Null}" Click="Maine_Coon_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="buttonspe.png"/>
+            </Button.Background>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="83" Margin="244,174,0,0" VerticalAlignment="Top" Width="84" Source="S8.jpg"/>
+        <Button x:Name="Sphinx" Content="Sphinx" HorizontalAlignment="Left" Height="37" Margin="521,379,0,0" VerticalAlignment="Top" Width="121" BorderBrush="{x:Null}" FontFamily="UD Digi Kyokasho NP-B" FontSize="14" Click="Sphinx_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="buttonspe.png"/>
+            </Button.Background>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="83" Margin="444,174,0,0" VerticalAlignment="Top" Width="83" Source="A3.jpeg"/>
+        <Image HorizontalAlignment="Left" Height="83" Margin="647,174,0,0" VerticalAlignment="Top" Width="84" Source="p4_edited.jpg"/>
+        <Image HorizontalAlignment="Left" Height="81" Margin="544,298,0,0" VerticalAlignment="Top" Width="81" Source="sph3_edited.jpg"/>
+        <Image HorizontalAlignment="Left" Height="83" Margin="343,298,0,0" VerticalAlignment="Top" Width="83" Source="M6.jpg"/>
+        <Button x:Name="BackEU" Content="BackEU" HorizontalAlignment="Left" Height="23" Margin="12,13,0,0" VerticalAlignment="Top" Width="26" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="BackEU_Click" >
+            <Button.Background>
+                <ImageBrush ImageSource="hicon.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="ClosEU" Content="ClosEU" HorizontalAlignment="Left" Height="15" Margin="767,15,0,0" VerticalAlignment="Top" Width="16" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ClosEU_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Picture1.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Scottish_Fold" Content="Scottish Fold" HorizontalAlignment="Left" Height="36" Margin="225,257,0,0" VerticalAlignment="Top" Width="121" BorderBrush="{x:Null}" FontFamily="UD Digi Kyokasho NP-B" FontSize="14" Click="Scottish_Fold_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="buttonspe.png"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>
